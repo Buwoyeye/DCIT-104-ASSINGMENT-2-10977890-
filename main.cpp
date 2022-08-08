@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+  void prime(int x);
+int main()
+{
+    int number = 0;
+    cout << "key in a number:" << endl;
+    cin >> number;
+    prime(number);
+}
+  void prime (int x)
+  {   int sum = 0;
+      for (int i = x; i>0; i--)
+      {
+          bool not_prime = false;
+          for(int j =2; j<i; j++)
+          {
+              if (i%j ==0)
+              {
+                  not_prime = true;
+                  j = i;
+              }
+
+              if (not_prime == false)
+              {
+                  sum = sum + i;
+              }
+          }
+      }
+      cout << "the sum is :"; cout << sum;
+  }
